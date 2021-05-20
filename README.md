@@ -1,12 +1,29 @@
 # Arduino Cowin Notifier
 
-Arduino program notify user when vaccine slot is available in cowin website using `ESP8266` micro controller (developed and tested on `WeMos D1 Mini` Board).
-Right now it only blinks an led, But a display or a buzzer can be added.
-Use this code to make your own projects.
+![Arduino Cowin Notifier](/imgs/image.jpg)
+
+Arduino program notify user when vaccine slot is available in cowin website using `ESP8266` micro controller (developed and tested on `NodeMCU` Board).
+
+Suports ILI9341 2.4Inch TFT LCD Display, If you are planning to build something based on this project, check the `base-code` branch of this repo, it has a basic code, without any displays
 
 ## Dependencies
 
--   `ArduinoJson` version `6.18.0`
+-   [ArduinoJson](https://github.com/bblanchon/ArduinoJson) version `6.18.0`
+
+-   [Adafruit ILI9341 Arduino Library](https://github.com/adafruit/Adafruit_ILI9341)
+
+## Pin Connection
+
+| Display Pin | `ESP8266` pin         |
+| ----------- | --------------------- |
+| CS          | D2 (ESP8266EX GPIO4)  |
+| RST         | D3 (ESP8266EX GPIO0)  |
+| D/C         | D4 (ESP8266EX GPIO2)  |
+| MOSI        | D7 (ESP8266EX GPIO13) |
+| SCK         | D5 (ESP8266EX GPIO14) |
+| LED         | 3V3                   |
+| VCC         | 3V3                   |
+| GND         | GND                   |
 
 ## Code Walk Through
 

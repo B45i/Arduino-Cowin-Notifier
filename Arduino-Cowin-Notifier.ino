@@ -143,6 +143,12 @@ void pingServer() {
     slotFound = true;
     String payload = http.getString();
     displayData(payload);
+  } else {
+    tft.fillScreen(ILI9341_BLACK);
+    tft.setTextColor(ILI9341_RED);
+    tft.setCursor(0, 0);
+    tft.println("");
+    tft.println("No Slots Avilable");
   }
 
   http.end();
